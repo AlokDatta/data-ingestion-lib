@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import uk.gov.hmcts.reform.data.ingestion.camel.route.beans.FileStatus;
 import uk.gov.hmcts.reform.data.ingestion.camel.route.beans.RouteProperties;
-import uk.gov.hmcts.reform.data.ingestion.camel.service.EmailServiceImpl;
+import uk.gov.hmcts.reform.data.ingestion.camel.service.EmailService;
 import uk.gov.hmcts.reform.data.ingestion.camel.service.IAuditService;
 
 import java.util.Map;
@@ -41,7 +41,7 @@ public class ExceptionProcessor implements Processor {
     CamelContext camelContext;
 
     @Autowired
-    EmailServiceImpl emailServiceImpl;
+    EmailService emailService;
 
     @Value("${logging-component-name:data_ingestion}")
     private String logComponentName;

@@ -15,7 +15,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import uk.gov.hmcts.reform.data.ingestion.camel.route.beans.FileStatus;
 import uk.gov.hmcts.reform.data.ingestion.camel.route.beans.RouteProperties;
-import uk.gov.hmcts.reform.data.ingestion.camel.service.EmailServiceImpl;
+import uk.gov.hmcts.reform.data.ingestion.camel.service.EmailService;
 import uk.gov.hmcts.reform.data.ingestion.camel.service.IAuditService;
 
 import java.util.HashMap;
@@ -31,7 +31,7 @@ import static uk.gov.hmcts.reform.data.ingestion.camel.util.MappingConstants.ROU
 public class ExceptionProcessorTest extends CamelTestSupport {
 
     @Mock
-    EmailServiceImpl emailServiceImpl;
+    EmailService emailService;
 
     @InjectMocks
     ExceptionProcessor exceptionProcessor;
